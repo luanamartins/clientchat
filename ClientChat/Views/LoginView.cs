@@ -20,6 +20,7 @@ namespace ClientChat
         {
             
             Views.MainView v = new Views.MainView();
+            this.Hide();
             v.Show();
             
         }

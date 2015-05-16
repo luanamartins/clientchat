@@ -18,8 +18,18 @@ namespace ClientChat.Views
 
         private void MainView_Load(object sender, EventArgs e)
         {
+            displayMessageBox.Text = "";
+        }
 
-            this.reportViewer1.RefreshReport();
+        private void sendButton_Click(object sender, EventArgs e)
+        {
+            displayMessageBox.Text = displayMessageBox.Text + userMessageBox.Text + Environment.NewLine;
+            userMessageBox.Text = "";
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            userMessageBox.Text = "";
         }
     }
 }
