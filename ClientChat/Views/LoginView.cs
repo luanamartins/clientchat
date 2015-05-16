@@ -18,8 +18,10 @@ namespace ClientChat
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+            
             Views.MainView v = new Views.MainView();
             v.Show();
+            
         }
     }
 }
