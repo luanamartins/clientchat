@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ClientChat
 {
-    public partial class Form1 : Form
+    public partial class LoginView : Form
     {
-        public Form1()
+        public LoginView()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace ClientChat
 
         private void newUserAccountButton_Click(object sender, EventArgs e)
         {
-            Views.NewAccountForm v = new Views.NewAccountForm();
+            Views.NewUserAccountView v = new Views.NewUserAccountView();
             this.Hide();
             v.Show();
         }
