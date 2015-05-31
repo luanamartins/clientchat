@@ -24,5 +24,13 @@ namespace ClientChat
             v.Show();
             
         }
+
+        private void newUserAccountButton_Click(object sender, EventArgs e)
+        {
+            Views.NewAccountForm v = new Views.NewAccountForm();
+            this.Hide();
+            v.Show();
+        }
+
     }
 }

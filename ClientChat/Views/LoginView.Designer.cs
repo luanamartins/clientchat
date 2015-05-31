@@ -33,6 +33,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.LoginButton = new System.Windows.Forms.Button();
+            this.newUserAccountButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +70,7 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(242, 203);
+            this.LoginButton.Location = new System.Drawing.Point(242, 156);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(184, 23);
             this.LoginButton.TabIndex = 4;
@@ -77,11 +78,22 @@
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
+            // newUserAccountButton
+            // 
+            this.newUserAccountButton.Location = new System.Drawing.Point(242, 197);
+            this.newUserAccountButton.Name = "newUserAccountButton";
+            this.newUserAccountButton.Size = new System.Drawing.Size(184, 23);
+            this.newUserAccountButton.TabIndex = 5;
+            this.newUserAccountButton.Text = "New User account";
+            this.newUserAccountButton.UseVisualStyleBackColor = true;
+            this.newUserAccountButton.Click += new System.EventHandler(this.newUserAccountButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 295);
+            this.Controls.Add(this.newUserAccountButton);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -101,6 +113,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Button newUserAccountButton;
     }
 }
 
