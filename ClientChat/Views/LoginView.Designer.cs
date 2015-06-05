@@ -84,11 +84,11 @@
             this.newUserAccountButton.Name = "newUserAccountButton";
             this.newUserAccountButton.Size = new System.Drawing.Size(184, 23);
             this.newUserAccountButton.TabIndex = 5;
-            this.newUserAccountButton.Text = "New User account";
+            this.newUserAccountButton.Text = "New Account";
             this.newUserAccountButton.UseVisualStyleBackColor = true;
             this.newUserAccountButton.Click += new System.EventHandler(this.newUserAccountButton_Click);
             // 
-            // Form1
+            // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,7 +99,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "LoginView";
             this.Text = "ClientChat";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -27,7 +27,7 @@ namespace ClientChat
 
         private void newUserAccountButton_Click(object sender, EventArgs e)
         {
-            Views.NewUserAccountView v = new Views.NewUserAccountView();
+            Views.NewAccountView v = new Views.NewAccountView();
             this.Hide();
             v.Show();
         }

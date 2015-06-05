@@ -100,7 +100,7 @@
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Name = "NewAccountView";
-            this.Text = "NewAccountView";
+            this.Text = "New Account";
             this.ResumeLayout(false);
             this.PerformLayout();
 
