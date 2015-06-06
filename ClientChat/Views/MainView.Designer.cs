@@ -123,7 +123,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainView";
-            this.Text = "Janela";
+            this.Text = "ClientChat Window";
             this.Load += new System.EventHandler(this.MainView_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
