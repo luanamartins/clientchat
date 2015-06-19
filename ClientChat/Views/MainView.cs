@@ -36,12 +36,12 @@ namespace ClientChat.Views
 
         private void cancelButton_Click(object sender, EventArgs e)
         {
-            userMessageBox.Text = "";
+            cleanMessageBox();
         }
 
         private void cleanMessageBox()
         {
-            userMessageBox.Text = "";
+            userMessageBox.Text = Constants.EMPTY_MESSAGE;
         }
     }
 }
