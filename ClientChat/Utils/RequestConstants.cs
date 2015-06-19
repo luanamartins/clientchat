@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ClientChat.Controllers
+namespace ClientChat.Utils
 {
     class RequestConstants
     {
@@ -12,6 +12,5 @@ namespace ClientChat.Controllers
 
         public const string REQUEST_NEW_USER = "New User";
         public const string REQUEST_ = "";
-
     }
 }
