@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 using ClientChat.Controllers;
+using ClientChat.Utils;
 
 namespace ClientChat.Views
 {
@@ -26,8 +27,11 @@ namespace ClientChat.Views
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-            displayMessageBox.Text = displayMessageBox.Text + "Login> " + userMessageBox.Text + Environment.NewLine;
-            cleanMessageBox();
+            if(!displayMessageBox.Equals(Constants.EMPTY_MESSAGE))
+            { 
+                displayMessageBox.Text = displayMessageBox.Text + "Login> " + userMessageBox.Text + Environment.NewLine;
+                cleanMessageBox();
+            }
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

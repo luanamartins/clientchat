@@ -10,5 +10,7 @@ namespace ClientChat.Utils
         public const string SERVER_IP_ADDRESS = "";
         public const int SERVER_PORT = 2000;
 
+        public const string EMPTY_MESSAGE = "";
+
     }
 }
