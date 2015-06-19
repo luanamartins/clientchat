@@ -9,7 +9,7 @@ namespace ClientChat.Controllers
     class LoginController
     {
 
-        WebProxy p = new WebProxy(ClientChat.Utils.Constants.SERVER_IP_ADDRESS, ClientChat.Utils.Constants.SERVER_PORT);
+        WebProxy p = new WebProxy(ClientChat.Utils.RequestConstants.IP_ADDRESS, ClientChat.Utils.RequestConstants.PORT);
 
         public bool login(string username, string password) 
         { 

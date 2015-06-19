@@ -8,7 +8,7 @@ using System.Net;
 using System.Text;
 using System.Net.Sockets;
 
-using ClientChat.Controllers;
+using ClientChat.Utils;
 
 namespace ClientChat
 {
@@ -17,10 +17,6 @@ namespace ClientChat
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
-
-        static string IP_ADDRESS = "127.0.0.1";
-        static int PORT = 8001;
 
         static void Main()
         {
@@ -56,7 +52,6 @@ namespace ClientChat
 
                 tcpclnt.Close();
             }
-
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
