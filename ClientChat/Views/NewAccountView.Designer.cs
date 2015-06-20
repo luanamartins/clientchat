@@ -58,9 +58,9 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(249, 199);
+            this.buttonCancel.Location = new System.Drawing.Point(249, 161);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(83, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(126, 23);
             this.buttonCancel.TabIndex = 2;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(160, 199);
+            this.buttonSend.Location = new System.Drawing.Point(120, 161);
             this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(83, 23);
+            this.buttonSend.Size = new System.Drawing.Size(128, 23);
             this.buttonSend.TabIndex = 3;
             this.buttonSend.Text = "Send";
             this.buttonSend.UseVisualStyleBackColor = true;
