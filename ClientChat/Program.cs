@@ -36,16 +36,18 @@ namespace ClientChat
                 Console.Write("Enter the string to be transmitted : ");
 
                 String str = "Mensagem a ser enviada";
-                Stream stm = tcpclnt.GetStream();
+                Stream stream = tcpclnt.GetStream();
 
-                ASCIIEncoding asen = new ASCIIEncoding();
-                byte[] ba = asen.GetBytes(str);
+                ASCIIEncoding encoding = new ASCIIEncoding();
+                byte[] ba = encoding.GetBytes(str);
                 Console.WriteLine("Transmitting.....");
 
-                stm.Write(ba, 0, ba.Length);
+                stream.Write(ba, 0, ba.Length);
+
+
 
                 byte[] bb = new byte[100];
-                int k = stm.Read(bb, 0, 100);
+                int k = stream.Read(bb, 0, 100);
 
                 for (int i = 0; i < k; i++)
                     Console.Write(Convert.ToChar(bb[i]));
