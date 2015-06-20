@@ -31,12 +31,13 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.displayMessageBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButtonHttps = new System.Windows.Forms.RadioButton();
+            this.radioButtonHttp = new System.Windows.Forms.RadioButton();
             this.userMessageBox = new System.Windows.Forms.TextBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.sendButton = new System.Windows.Forms.Button();
             this.tableUserFriendsLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButtonHttp = new System.Windows.Forms.RadioButton();
-            this.radioButtonHttps = new System.Windows.Forms.RadioButton();
+            this.SendfilesButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.SendfilesButton);
             this.panel2.Controls.Add(this.radioButtonHttps);
             this.panel2.Controls.Add(this.radioButtonHttp);
             this.panel2.Controls.Add(this.userMessageBox);
@@ -70,6 +72,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(375, 132);
             this.panel2.TabIndex = 2;
+            // 
+            // radioButtonHttps
+            // 
+            this.radioButtonHttps.AutoSize = true;
+            this.radioButtonHttps.Location = new System.Drawing.Point(96, 9);
+            this.radioButtonHttps.Name = "radioButtonHttps";
+            this.radioButtonHttps.Size = new System.Drawing.Size(61, 17);
+            this.radioButtonHttps.TabIndex = 3;
+            this.radioButtonHttps.TabStop = true;
+            this.radioButtonHttps.Text = "HTTPS";
+            this.radioButtonHttps.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonHttp
+            // 
+            this.radioButtonHttp.AutoSize = true;
+            this.radioButtonHttp.Location = new System.Drawing.Point(4, 9);
+            this.radioButtonHttp.Name = "radioButtonHttp";
+            this.radioButtonHttp.Size = new System.Drawing.Size(54, 17);
+            this.radioButtonHttp.TabIndex = 2;
+            this.radioButtonHttp.TabStop = true;
+            this.radioButtonHttp.Text = "HTTP";
+            this.radioButtonHttp.UseVisualStyleBackColor = true;
             // 
             // userMessageBox
             // 
@@ -81,9 +105,9 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(288, 83);
+            this.cancelButton.Location = new System.Drawing.Point(288, 97);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(87, 46);
+            this.cancelButton.Size = new System.Drawing.Size(87, 32);
             this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -91,9 +115,9 @@
             // 
             // sendButton
             // 
-            this.sendButton.Location = new System.Drawing.Point(288, 32);
+            this.sendButton.Location = new System.Drawing.Point(288, 58);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(87, 45);
+            this.sendButton.Size = new System.Drawing.Size(87, 33);
             this.sendButton.TabIndex = 0;
             this.sendButton.Text = "Send";
             this.sendButton.UseVisualStyleBackColor = true;
@@ -118,27 +142,14 @@
             this.tableUserFriendsLayout.Size = new System.Drawing.Size(144, 286);
             this.tableUserFriendsLayout.TabIndex = 3;
             // 
-            // radioButtonHttp
+            // SendfilesButton
             // 
-            this.radioButtonHttp.AutoSize = true;
-            this.radioButtonHttp.Location = new System.Drawing.Point(4, 9);
-            this.radioButtonHttp.Name = "radioButtonHttp";
-            this.radioButtonHttp.Size = new System.Drawing.Size(54, 17);
-            this.radioButtonHttp.TabIndex = 2;
-            this.radioButtonHttp.TabStop = true;
-            this.radioButtonHttp.Text = "HTTP";
-            this.radioButtonHttp.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonHttps
-            // 
-            this.radioButtonHttps.AutoSize = true;
-            this.radioButtonHttps.Location = new System.Drawing.Point(96, 9);
-            this.radioButtonHttps.Name = "radioButtonHttps";
-            this.radioButtonHttps.Size = new System.Drawing.Size(61, 17);
-            this.radioButtonHttps.TabIndex = 3;
-            this.radioButtonHttps.TabStop = true;
-            this.radioButtonHttps.Text = "HTTPS";
-            this.radioButtonHttps.UseVisualStyleBackColor = true;
+            this.SendfilesButton.Location = new System.Drawing.Point(288, 20);
+            this.SendfilesButton.Name = "SendfilesButton";
+            this.SendfilesButton.Size = new System.Drawing.Size(87, 32);
+            this.SendfilesButton.TabIndex = 4;
+            this.SendfilesButton.Text = "Send files";
+            this.SendfilesButton.UseVisualStyleBackColor = true;
             // 
             // MainView
             // 
@@ -170,5 +181,6 @@
         private System.Windows.Forms.TableLayoutPanel tableUserFriendsLayout;
         private System.Windows.Forms.RadioButton radioButtonHttps;
         private System.Windows.Forms.RadioButton radioButtonHttp;
+        private System.Windows.Forms.Button SendfilesButton;
     }
 }
