@@ -43,5 +43,16 @@ namespace ClientChat.Views
         {
             userMessageBox.Text = Constants.EMPTY_MESSAGE;
         }
+
+        private void addOnlineFriends() 
+        {
+            // UNDONE
+            tableUserFriendsLayout.Controls.Add(new Label() { Text = "Type:", Anchor = AnchorStyles.Left, AutoSize = true });
+        }
+
+        private void SendfilesButton_Click(object sender, EventArgs e)
+        {
+            // TODO
+        }
     }
 }
