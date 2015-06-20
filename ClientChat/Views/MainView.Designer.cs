@@ -150,6 +150,7 @@
             this.SendfilesButton.TabIndex = 4;
             this.SendfilesButton.Text = "Send files";
             this.SendfilesButton.UseVisualStyleBackColor = true;
+            this.SendfilesButton.Click += new System.EventHandler(this.SendfilesButton_Click);
             // 
             // MainView
             // 
