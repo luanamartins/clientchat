@@ -32,5 +32,12 @@ namespace ClientChat
             v.Show();
         }
 
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            Views.SettingsView view = new Views.SettingsView();
+            this.Hide();
+            view.Show();
+        }
+
     }
 }

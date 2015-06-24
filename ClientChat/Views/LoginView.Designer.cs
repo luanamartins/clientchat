@@ -35,6 +35,7 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.newUserAccountButton = new System.Windows.Forms.Button();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.buttonSettings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,11 +99,22 @@
             this.pictureBoxLogo.TabIndex = 6;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // buttonSettings
+            // 
+            this.buttonSettings.Location = new System.Drawing.Point(406, 190);
+            this.buttonSettings.Name = "buttonSettings";
+            this.buttonSettings.Size = new System.Drawing.Size(128, 23);
+            this.buttonSettings.TabIndex = 7;
+            this.buttonSettings.Text = "Settings";
+            this.buttonSettings.UseVisualStyleBackColor = true;
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 260);
+            this.Controls.Add(this.buttonSettings);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.newUserAccountButton);
             this.Controls.Add(this.LoginButton);
@@ -127,6 +139,7 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button newUserAccountButton;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Button buttonSettings;
     }
 }
 
