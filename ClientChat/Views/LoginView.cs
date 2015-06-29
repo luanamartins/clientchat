@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ClientChat
@@ -18,11 +12,9 @@ namespace ClientChat
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            
             Views.MainView v = new Views.MainView();
             this.Hide();
             v.Show();
-            
         }
 
         private void newUserAccountButton_Click(object sender, EventArgs e)
@@ -39,5 +31,11 @@ namespace ClientChat
             view.Show();
         }
 
+        public void insertImage()
+        {
+            // UNDONE
+            pictureBoxLogo.ImageLocation = "../SamuderaJayaMotor.png";
+            pictureBoxLogo.SizeMode = PictureBoxSizeMode.AutoSize;
+        }
     }
 }
