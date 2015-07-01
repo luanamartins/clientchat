@@ -9,7 +9,7 @@ namespace ClientChat.Controllers
     class ChatWindowController
     {
 
-        private static List<string> getListOfFriends()
+        private static List<string> GetListOfFriends()
         { 
             // TODO make request of a list of friends 
             List<string> listOfFriends = new List<string>();
@@ -27,7 +27,7 @@ namespace ClientChat.Controllers
             button.BackColor = new System.Drawing.Color();
             table.Controls.Add(button);
             
-            List<string> listOfFriends = getListOfFriends();
+            List<string> listOfFriends = GetListOfFriends();
             foreach(string friendName in listOfFriends)
             {
                 Label label = new Label();

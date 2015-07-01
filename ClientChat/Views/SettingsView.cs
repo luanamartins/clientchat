@@ -20,8 +20,8 @@ namespace ClientChat.Views
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            updateSettings();
-            this.Close();
+            UpdateSettings();
+            this.Close();           
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -29,10 +29,10 @@ namespace ClientChat.Views
             this.Close();
         }
 
-        private void updateSettings()
+        private void UpdateSettings()
         {
-            Singleton.getInstance().setIpAddress(serverAddressTextbox.Text);
-            Singleton.getInstance().setPort(Convert.ToInt32(portTextbox.Text));
+            Singleton.GetInstance().SetIpAddress(serverAddressTextbox.Text);
+            Singleton.GetInstance().SetPort(Convert.ToInt32(portTextbox.Text));
             this.Close();
         }
     }

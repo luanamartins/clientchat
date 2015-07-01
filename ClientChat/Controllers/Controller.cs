@@ -15,45 +15,62 @@ namespace ClientChat.Controllers
 
     internal class Controller
     {
-        public void loginRequest(string login, string password)
-        {
-        }
 
-        public void connectTest(String message) 
+        public void ConnectTCP(String message) 
         {
             try
             {
                 TcpClient tcpClient = new TcpClient();
-                Console.WriteLine("Connecting.....");
+
+                PrintOnConsole("Connecting.....");
 
                 tcpClient.Connect(RequestConstants.IP_ADDRESS, RequestConstants.PORT);
-                // use the ipaddress as in the server program
 
-                Console.WriteLine("Connected");
-                Console.Write("Enter the string to be transmitted : ");
+                PrintOnConsole("Connected");
+                PrintOnConsole("Enter the string to be transmitted : ");
 
-                //String message = "Mensagem a ser enviada";
                 Stream stream = tcpClient.GetStream();
 
-                ASCIIEncoding encoding = new ASCIIEncoding();
-                byte[] messageBytes = encoding.GetBytes(message);
-                Console.WriteLine("Transmitting.....");
+                SendMessage(message, stream);
 
-                stream.Write(messageBytes, 0, messageBytes.Length);
+                String receivedMessage = ReceiveMessage(stream);
 
-                byte[] messageReceivedBytes = new byte[100];
-                int sequenceOfBytes = stream.Read(messageReceivedBytes, 0, 100);
-
-                for (int i = 0; i < sequenceOfBytes; i++)
-                    Console.Write(Convert.ToChar(messageReceivedBytes[i]));
-
-                tcpClient.Close();
+                CloseConnection(tcpClient);
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
                 Console.WriteLine("Error..... " + e.StackTrace);
             }
+        }
+
+        public void SendMessage(String message, Stream stream) 
+        {
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] messageBytes = encoding.GetBytes(message);
+            Console.WriteLine("Transmitting.....");
+
+            stream.Write(messageBytes, 0, messageBytes.Length);
+        }
+
+        public String ReceiveMessage(Stream stream)
+        {
+            byte[] messageReceivedBytes = new byte[100];
+            int sequenceOfBytes = stream.Read(messageReceivedBytes, 0, 100);
+            String receivedMessage = messageReceivedBytes.ToString();
+            for (int i = 0; i < sequenceOfBytes; i++)
+                Console.Write(Convert.ToChar(messageReceivedBytes[i]));
+            return receivedMessage;
+        }
+
+        public void CloseConnection(TcpClient tcpClient) 
+        {
+            tcpClient.Close();
+        }
+
+        public void PrintOnConsole(String message)
+        {
+            Console.WriteLine(message);
         }
     }
 }

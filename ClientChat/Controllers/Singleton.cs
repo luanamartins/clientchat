@@ -9,7 +9,7 @@ namespace ClientChat.Controllers
         private String serverIpAddress;
         private int serverPort;
 
-        public static Singleton getInstance()
+        public static Singleton GetInstance()
         {
             if (singleton == null)
             {
@@ -19,12 +19,12 @@ namespace ClientChat.Controllers
             return singleton;
         }
 
-        public void setIpAddress(String ipAddress)
+        public void SetIpAddress(String ipAddress)
         {
             this.serverIpAddress = ipAddress;
         }
 
-        public void setPort(int port)
+        public void SetPort(int port)
         {
             this.serverPort = port;
         }
