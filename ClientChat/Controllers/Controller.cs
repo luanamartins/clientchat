@@ -1,22 +1,18 @@
-﻿using System;
+﻿using ClientChat.Utils;
+using System;
 using System.IO;
-using System.Net;
-using System.Text;
 using System.Net.Sockets;
-
-using ClientChat.Utils;
+using System.Text;
 
 namespace ClientChat.Controllers
 {
-
     /**
      Logging: https://codingsexy.wordpress.com/2013/07/07/log4net-code/
      */
 
     internal class Controller
     {
-
-        public void ConnectTCP(String message) 
+        public void ConnectTCP(String message)
         {
             try
             {
@@ -44,7 +40,7 @@ namespace ClientChat.Controllers
             }
         }
 
-        public void SendMessage(String message, Stream stream) 
+        public void SendMessage(String message, Stream stream)
         {
             ASCIIEncoding encoding = new ASCIIEncoding();
             byte[] messageBytes = encoding.GetBytes(message);
@@ -59,11 +55,15 @@ namespace ClientChat.Controllers
             int sequenceOfBytes = stream.Read(messageReceivedBytes, 0, 100);
             String receivedMessage = messageReceivedBytes.ToString();
             for (int i = 0; i < sequenceOfBytes; i++)
+            {
                 Console.Write(Convert.ToChar(messageReceivedBytes[i]));
+            }
+            Console.WriteLine();
+            Console.WriteLine(receivedMessage);
             return receivedMessage;
         }
 
-        public void CloseConnection(TcpClient tcpClient) 
+        public void CloseConnection(TcpClient tcpClient)
         {
             tcpClient.Close();
         }
