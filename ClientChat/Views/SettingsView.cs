@@ -18,22 +18,25 @@ namespace ClientChat.Views
             InitializeComponent();
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            UpdateSettings();
-            this.Close();           
-        }
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void UpdateSettings()
         {
             Singleton.GetInstance().SetIpAddress(serverAddressTextbox.Text);
             Singleton.GetInstance().SetPort(Convert.ToInt32(portTextbox.Text));
             this.Close();
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            UpdateSettings();
+            this.Close();
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+
     }
 }

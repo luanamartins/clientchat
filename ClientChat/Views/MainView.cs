@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-
-using ClientChat.Controllers;
+﻿using ClientChat.Controllers;
 using ClientChat.Utils;
+using System;
+using System.Windows.Forms;
 
 namespace ClientChat.Views
 {
@@ -22,13 +15,13 @@ namespace ClientChat.Views
         private void MainView_Load(object sender, EventArgs e)
         {
             displayMessageBox.Text = "";
-            ChatWindowController.AddFriendTableLayout(tableUserFriendsLayout); 
+            ChatWindowController.AddFriendTableLayout(tableUserFriendsLayout);
         }
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-            if(!displayMessageBox.Equals(RequestConstants.REQUEST_MESSAGE_EMPTY))
-            { 
+            if (!displayMessageBox.Equals(RequestConstants.REQUEST_MESSAGE_EMPTY))
+            {
                 displayMessageBox.Text = displayMessageBox.Text + "Login> " + userMessageBox.Text + Environment.NewLine;
                 cleanMessageBox();
             }
@@ -44,15 +37,15 @@ namespace ClientChat.Views
             userMessageBox.Text = RequestConstants.REQUEST_MESSAGE_EMPTY;
         }
 
-        private void addOnlineFriends() 
+        private void addOnlineFriends()
         {
-            // UNDONE
+            // UNDONE addOnlineFriends
             tableUserFriendsLayout.Controls.Add(new Label() { Text = "Type:", Anchor = AnchorStyles.Left, AutoSize = true });
         }
 
         private void SendfilesButton_Click(object sender, EventArgs e)
         {
-            // TODO
+            // TODO Sendfiles
         }
     }
 }

@@ -28,77 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.serverAddress = new System.Windows.Forms.Label();
-            this.labelPort = new System.Windows.Forms.Label();
-            this.serverAddressTextbox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.portTextbox = new System.Windows.Forms.TextBox();
-            this.buttonSave = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.serverAddressTextbox = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // serverAddress
+            // label1
             // 
-            this.serverAddress.AutoSize = true;
-            this.serverAddress.Location = new System.Drawing.Point(44, 28);
-            this.serverAddress.Name = "serverAddress";
-            this.serverAddress.Size = new System.Drawing.Size(92, 13);
-            this.serverAddress.TabIndex = 0;
-            this.serverAddress.Text = "Server IP Address";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Server port";
             // 
-            // labelPort
+            // label2
             // 
-            this.labelPort.AutoSize = true;
-            this.labelPort.Location = new System.Drawing.Point(44, 60);
-            this.labelPort.Name = "labelPort";
-            this.labelPort.Size = new System.Drawing.Size(59, 13);
-            this.labelPort.TabIndex = 1;
-            this.labelPort.Text = "Server port";
-            // 
-            // serverAddressTextbox
-            // 
-            this.serverAddressTextbox.Location = new System.Drawing.Point(164, 25);
-            this.serverAddressTextbox.Name = "serverAddressTextbox";
-            this.serverAddressTextbox.Size = new System.Drawing.Size(141, 20);
-            this.serverAddressTextbox.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Server address";
             // 
             // portTextbox
             // 
-            this.portTextbox.Location = new System.Drawing.Point(164, 60);
+            this.portTextbox.Location = new System.Drawing.Point(127, 29);
             this.portTextbox.Name = "portTextbox";
-            this.portTextbox.Size = new System.Drawing.Size(141, 20);
-            this.portTextbox.TabIndex = 3;
+            this.portTextbox.Size = new System.Drawing.Size(159, 20);
+            this.portTextbox.TabIndex = 2;
             // 
-            // buttonSave
+            // serverAddressTextbox
             // 
-            this.buttonSave.Location = new System.Drawing.Point(90, 110);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(109, 23);
-            this.buttonSave.TabIndex = 4;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            this.serverAddressTextbox.Location = new System.Drawing.Point(127, 67);
+            this.serverAddressTextbox.Name = "serverAddressTextbox";
+            this.serverAddressTextbox.Size = new System.Drawing.Size(159, 20);
+            this.serverAddressTextbox.TabIndex = 3;
             // 
-            // buttonCancel
+            // saveButton
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(222, 110);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(109, 23);
-            this.buttonCancel.TabIndex = 5;
-            this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            this.saveButton.Location = new System.Drawing.Point(57, 115);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(106, 23);
+            this.saveButton.TabIndex = 4;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(169, 115);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(106, 23);
+            this.cancelButton.TabIndex = 5;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // SettingsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 165);
-            this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.portTextbox);
+            this.ClientSize = new System.Drawing.Size(334, 159);
+            this.Controls.Add(this.cancelButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.serverAddressTextbox);
-            this.Controls.Add(this.labelPort);
-            this.Controls.Add(this.serverAddress);
+            this.Controls.Add(this.portTextbox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "SettingsView";
             this.Text = "SettingsView";
             this.ResumeLayout(false);
@@ -108,11 +108,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label serverAddress;
-        private System.Windows.Forms.Label labelPort;
-        private System.Windows.Forms.TextBox serverAddressTextbox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox portTextbox;
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.TextBox serverAddressTextbox;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }

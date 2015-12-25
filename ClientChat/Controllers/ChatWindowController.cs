@@ -1,24 +1,19 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ClientChat.Controllers
 {
-    class ChatWindowController
+    internal class ChatWindowController
     {
-
         private static List<string> GetListOfFriends()
-        { 
-            // TODO make request of a list of friends 
+        {
+            // TODO make request of a list of friends
             List<string> listOfFriends = new List<string>();
-            listOfFriends.Add("Name 1");
-            listOfFriends.Add("Name 2");
-            listOfFriends.Add("Name 3");
+            listOfFriends.Add("Friend 1");
+            listOfFriends.Add("Friend 2");
+            listOfFriends.Add("Friend 3");
             return listOfFriends;
         }
-
 
         internal static void AddFriendTableLayout(TableLayoutPanel table)
         {
@@ -26,9 +21,9 @@ namespace ClientChat.Controllers
             button.Text = "Friend";
             button.BackColor = new System.Drawing.Color();
             table.Controls.Add(button);
-            
+
             List<string> listOfFriends = GetListOfFriends();
-            foreach(string friendName in listOfFriends)
+            foreach (string friendName in listOfFriends)
             {
                 Label label = new Label();
                 label.Text = friendName;
