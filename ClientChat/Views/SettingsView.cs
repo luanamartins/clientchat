@@ -31,8 +31,8 @@ namespace ClientChat.Views
 
         private void updateSettings()
         {
-            Singleton.getInstance().setIpAddress(serverAddressTextbox.Text);
-            Singleton.getInstance().setPort(Convert.ToInt32(portTextbox.Text));
+            ServerConfiguration.getInstance().setIpAddress(serverAddressTextbox.Text);
+            ServerConfiguration.getInstance().setPort(Convert.ToInt32(portTextbox.Text));
             this.Close();
         }
     }

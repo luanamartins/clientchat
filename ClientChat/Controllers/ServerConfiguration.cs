@@ -2,18 +2,18 @@
 
 namespace ClientChat.Controllers
 {
-    public class Singleton
+    public class ServerConfiguration
     {
-        private static Singleton singleton;
+        private static ServerConfiguration singleton;
 
         private String serverIpAddress;
         private int serverPort;
 
-        public static Singleton getInstance()
+        public static ServerConfiguration getInstance()
         {
             if (singleton == null)
             {
-                singleton = new Singleton();
+                singleton = new ServerConfiguration();
             }
 
             return singleton;
