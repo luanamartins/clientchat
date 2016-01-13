@@ -12,5 +12,7 @@ namespace ClientChat.Utils
 
         public const string REQUEST_NEW_USER = "New User";
         public const string REQUEST_ = "";
+
+        public const string EMPTY_MESSAGE = "";
     }
 }

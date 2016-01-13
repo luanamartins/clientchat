@@ -27,7 +27,7 @@ namespace ClientChat.Views
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-            if(!displayMessageBox.Equals(Constants.EMPTY_MESSAGE))
+            if (!displayMessageBox.Equals(RequestConstants.EMPTY_MESSAGE))
             { 
                 displayMessageBox.Text = displayMessageBox.Text + "Login> " + userMessageBox.Text + Environment.NewLine;
                 cleanMessageBox();
@@ -41,7 +41,7 @@ namespace ClientChat.Views
 
         private void cleanMessageBox()
         {
-            userMessageBox.Text = Constants.EMPTY_MESSAGE;
+            userMessageBox.Text = RequestConstants.EMPTY_MESSAGE;
         }
 
         private void addOnlineFriends() 
